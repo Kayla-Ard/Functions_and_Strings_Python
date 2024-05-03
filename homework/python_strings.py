@@ -32,7 +32,7 @@ def pos_and_neg_count():
             if word.lower() in positive_words:
                 number_of_positive += 1
 
-    print(f" The number of positives are {number_of_positive}.")
+    print(f"The number of positives are {number_of_positive}.")
     
     for sentence in python_reviews:
         for word in sentence.split():
@@ -40,7 +40,7 @@ def pos_and_neg_count():
             if word.lower() in negative_words:
                 number_of_negative += 1
                 
-    print(f" The number of negatives are {number_of_negative}.")
+    print(f"The number of negatives are {number_of_negative}.")
     
 pos_and_neg_count()
 
@@ -52,11 +52,14 @@ pos_and_neg_count()
 
 python_reviews = [ "This product is really good. I'm impressed with its quality.", "The performance of this product is excellent. Highly recommended!","I had a bad experience with this product. It didn't meet my expectations.", "Poor quality product. Wouldn't recommend it to anyone.", "The product was average. Nothing extraordinary about it." ]
 reviews = " ".join(python_reviews)
-new_reviews = reviews.replace("'", "")
-sliced_review = new_reviews[:31] + "..."
-print(sliced_review)
 
-
+i = 30
+for sentence in python_reviews:
+    i = 30
+    while sentence[i] != " ":
+        i += 1
+    sliced_review = sentence[:i] + "..."
+    print(sliced_review)
 
 
 # User Input Data Processor
