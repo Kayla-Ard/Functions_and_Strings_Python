@@ -62,3 +62,22 @@ print(sliced_review)
 # User Input Data Processor
 # Task 1: Input Length Validator Write a script that checks the length of the user's first name and last name.
 # Both should be at least 2 characters long. If not, print an error message.
+
+print("Let's get you info!")
+first_name = input("Please enter your first name: ")
+last_name = input("Please enter your last name: ")
+while True:
+    
+    if len(first_name) >= 2:
+        print("First name recorded successfully!")
+        if len(last_name) >= 2:
+            print("Last name recorded successfully!")
+            break
+        else:
+            print("Last name must be at least 2 characters long!")
+            last_name = input("Please enter your last name: ")
+    else:
+        print("First name must be at least 2 characters long!")
+        first_name = input("Please enter your first name: ")
+        
+print(f"Your name has been recorded as {first_name} {last_name}! Thank you!")
